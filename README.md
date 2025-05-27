@@ -1,6 +1,6 @@
 # Daily Coding Log
 
-This repo automatically fetches and stores daily coding tips or tutorials from Dev.to.
+This repo automatically fetches and stores daily coding tips or tutorials from Dev.to. Further integrateion i will try to integrate it with my obsidian
 
 ## Categories
 
