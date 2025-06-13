@@ -4,6 +4,9 @@ import requests
 import subprocess
 from datetime import datetime
 
+with open("/home/debian/cron_debug.log", "a") as f:
+    f.write(f"Script ran at {datetime.now()}\n")
+
 REPO_PATH = os.path.dirname(os.path.abspath(__file__))
 CATEGORIES = ['python', 'javascript', 'typescript', 'react', 'vue', 'angular', 'webdev', 'html', 'css', 'tailwindcss', 'frontend', 'backend', 'node', 'express', 'api', 'sql', 'postgresql', 'mongodb', 'mysql', 'devops', 'docker', 'kubernetes', 'terraform', 'ansible', 'aws', 'azure', 'gcp', 'cloud', 'ci', 'github', 'gitlab', 'git', 'linux', 'bash', 'shell', 'security', 'cybersecurity', 'networking', 'machinelearning', 'deeplearning', 'datascience', 'ai', 'nlp', 'blockchain', 'web3', 'solidity', 'programming', 'beginners', 'productivity', 'testing', 'unittesting', 'tdd', 'debugging', 'performance', 'softwareengineering', 'architecture', 'clean-code', 'oop', 'designpatterns', 'freelancing', 'remote', 'career', 'interview', 'resume', 'opensource', 'game-dev', 'gamedev', 'unity', 'godot', 'rust', 'go', 'csharp', 'java', 'kotlin', 'swift', 'android', 'ios', 'flutter', 'dart']
 FALLBACK_TIPS = {'python': 'Use list comprehensions for concise loops.', 'javascript': 'Always use === instead of == for comparisons.', 'devops': 'Automate deployments using CI/CD tools.', 'git': 'Use `git stash` to save your changes temporarily.', 'docker': 'Keep your Docker images lean by using slim base images.', 'linux': 'Use `htop` to monitor your system performance in real-time.'}
